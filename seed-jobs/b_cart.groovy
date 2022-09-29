@@ -1,8 +1,8 @@
-multibranchPipelineJob('CI-Pipelines/cart') {
+multibranchPipelineJob('CI-Pipelines/b_cart') {
     branchSources {
         git {
             id('123456789') // IMPORTANT: use a constant and unique identifier
-            remote('https://github.com/dotunprom/cart.git')
+            remote('https://github.com/dotunprom/b_cart.git')
             credentialsId('github-ci')
         }
     }
