@@ -3,7 +3,6 @@ multibranchPipelineJob('CI-Pipelines/cart') {
         git {
             id('123456789') // IMPORTANT: use a constant and unique identifier
             remote('https://github.com/dotunprom/cart.git')
-            credentialsId('github-ci')
         }
     }
     orphanedItemStrategy {
