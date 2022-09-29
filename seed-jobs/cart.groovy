@@ -1,8 +1,15 @@
-freeStyleJob('example') {
-    scm {
-        github('jenkinsci/job-dsl-plugin', 'master')
+multibranchPipelineJob('example') {
+    branchSources {
+        git {
+            id('123456789') // IMPORTANT: use a constant and unique identifier
+            remote('https://github.com/jenkinsci/job-dsl-plugin.git')
+            credentialsId('github-ci')
+            includes('JENKINS-*')
+        }
     }
-    steps {
-        gradle('clean build')
+    orphanedItemStrategy {
+        discardOldItems {
+            numToKeep(20)
+        }
     }
 }
