@@ -4,7 +4,7 @@ multibranchPipelineJob('CI-Pipelines/cart') {
             github {
                 id('23232323') // IMPORTANT: use a constant and unique identifier
                 scanCredentialsId('GitHub')
-                repository('https://github.com/dotunprom/cart')
+                repository('dotunprom/cart')
             }
         }
     }
