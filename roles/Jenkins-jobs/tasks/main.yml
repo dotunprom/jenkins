@@ -1,3 +1,2 @@
-- name: Demo
-  debug:
-    msg: Hello
+- name: Check Jenkins Connection
+  shell: "{{JENKINS_CLI_PREFIX}} who-am-i"
