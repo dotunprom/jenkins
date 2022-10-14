@@ -10,7 +10,7 @@
 - name: Update Job Template
   template:
     src: job.xml
-    destination: /tmp/job.xml
+    dest: /tmp/job.xml
 
 - name: Create a Job
   when: Check_job.rc == 3
