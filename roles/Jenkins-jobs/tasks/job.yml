@@ -1,0 +1,17 @@
+- name: Check if job exists
+    shell: "{{ JENKINS_CLI_PREFIX }} get-job {{item.name}}"
+    ignore.errors: true
+    register: check_job
+
+- name: Generate UNIQ String for job
+    shell: date | md5sum |  awk '{print $1}'
+    register: uniq_string
+
+- name: Update Job Template
+    template:
+      src: job.xml
+      destination: /tmp/job.xml
+
+- name: Create a Job
+    when: Check_job.rc == 3
+    shell: "{{ JENKINS_CLI_PREFIX }} create-job {{item.name}}"
