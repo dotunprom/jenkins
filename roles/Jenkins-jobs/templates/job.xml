@@ -25,7 +25,7 @@
                     <apiUri>https://api.github.com</apiUri>
                     <credentialsId>seed-job</credentialsId>
                     <repoOwner>dotunprom</repoOwner>
-                    <repository>cart</repository>
+                    <repository>{{item.repoName}}</repository>
                     <repositoryUrl>https://github.com/dotunprom/{{item.repoName}}</repositoryUrl>
                     <traits>
                         <org.jenkinsci.plugins.github__branch__source.BranchDiscoveryTrait>
