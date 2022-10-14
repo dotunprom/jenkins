@@ -14,4 +14,4 @@
 
 - name: Create a Job
     when: Check_job.rc == 3
-    shell: "{{ JENKINS_CLI_PREFIX }} create-job {{item.name}}"
+    shell: "cat /tmp/job.xml | {{ JENKINS_CLI_PREFIX }} create-job {{item.name}}"
