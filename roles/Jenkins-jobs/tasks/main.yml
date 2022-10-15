@@ -5,7 +5,7 @@
 - name: Create jenkins folders
   include_tasks: folders-job.yml
   loop:
-    - {name: "CI-Pipelines", repoName: "All CI Pipelines"}
+    - {name: "CI-Pipelines", description: "All CI Pipelines"}
 
 
 - name: Create jenkins multi job pipelines
