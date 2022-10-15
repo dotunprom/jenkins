@@ -6,12 +6,12 @@
 - name: Update Dir Template
   template:
     src: folders-job.xml
-    dest: /tmp/mb-job.xml
+    dest: /tmp/job.xml
 
 - name: Create a Directory
   when: check_dir.rc == 3
-  shell: "cat /tmp/mb-job.xml | {{ JENKINS_CLI_PREFIX }} create-job {{item.name}}"
+  shell: "cat /tmp/job.xml | {{ JENKINS_CLI_PREFIX }} create-job {{item.name}}"
 
 - name: Update a Directory
   when: check_dir.rc == 0
-  shell: "cat /tmp/mb-job.xml | {{ JENKINS_CLI_PREFIX }} update-job {{item.name}}"
+  shell: "cat /tmp/job.xml | {{ JENKINS_CLI_PREFIX }} update-job {{item.name}}"
