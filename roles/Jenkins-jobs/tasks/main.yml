@@ -11,5 +11,5 @@
 - name: Create jenkins multi job pipelines
   include_tasks: mb-job.yml
   loop:
-    - {name: "sample1", repoName: "sample2"}
+    - {name: "cart", car: "sample2", CI-Pipelines/:}
     - {name: "sample1", repoName: "sample2"}
