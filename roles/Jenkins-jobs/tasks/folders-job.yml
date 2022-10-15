@@ -1,0 +1,17 @@
+- name: Check if dir exists
+  shell: "{{ JENKINS_CLI_PREFIX }} get-job {{item.name}}"
+  ignore_errors: true
+  register: check_dir
+
+- name: Update Dir Template
+  template:
+    src: mb-job.xml
+    dest: /tmp/mb-job.xml
+
+- name: Create a Directory
+  when: check_job.rc == 3
+  shell: "cat /tmp/mb-job.xml | {{ JENKINS_CLI_PREFIX }} create-job {{item.name}}"
+
+- name: Update a Directory
+  when: check_job.rc == 0
+  shell: "cat /tmp/mb-job.xml | {{ JENKINS_CLI_PREFIX }} update-job {{item.name}}"
