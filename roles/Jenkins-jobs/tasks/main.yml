@@ -12,4 +12,4 @@
   include_tasks: mb-job.yml
   loop:
     - {name: "cart", repoName: "cart", dirName: "CI-Pipelines/"}
-    - - {name: "tes", repoName: "test", dirName: ""}
+    - {name: "tes", repoName: "test", dirName: ""}
