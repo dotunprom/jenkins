@@ -1,0 +1,5 @@
+MY_JOB:
+  - { name: "cart", repoName: "cart", dirName: "CI-Pipelines/" }
+  - { name: "catalogue", repoName: "catalogue", dirName: "CI-Pipelines/" }
+  - { name: "user", repoName: "user", dirName: "CI-Pipelines/" }
+  # want to create a job, add it above.

@@ -10,8 +10,4 @@
 
 - name: Create jenkins multi job pipelines
   include_tasks: mb-job.yml
-  loop:
-    - {name: "cart", repoName: "cart", dirName: "CI-Pipelines/"}
-    - {name: "catalogue", repoName: "catalogue", dirName: "CI-Pipelines/"}
-    - {name: "user", repoName: "user", dirName: "CI-Pipelines/"}
-# want to create a job, add it above.
+  loop:"{{MY_JOBS}}"

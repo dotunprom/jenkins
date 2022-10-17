@@ -1,4 +1,6 @@
 - name: Create Jenkins Jobs
   hosts: localhost
+  vars_files:
+    - mb-jobs-list.yml
   roles:
     - Jenkins-jobs
