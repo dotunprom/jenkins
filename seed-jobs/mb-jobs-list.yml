@@ -5,4 +5,5 @@ MB_JOBS:
   - { name: "shipping", repoName: "shipping", dirName: "CI-Pipelines/" }
   - { name: "payment", repoName: "payment", dirName: "CI-Pipelines/" }
   - { name: "frontend", repoName: "frontend", dirName: "CI-Pipelines/" }
+  - { name: "dispatch", repoName: "dispatch", dirName: "CI-Pipelines/" }
   # want to create a job, add it above.
